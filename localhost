@@ -1,0 +1,37 @@
+krenare@krenare-VirtualBox:~$ python3 -m http.server
+
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+Terminated
+krenare@krenare-VirtualBox:~$ python3 -m http.server
+
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [07/May/2019 13:35:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2019 13:35:21] code 404, message File not found
+127.0.0.1 - - [07/May/2019 13:35:21] "GET /favicon.ico HTTP/1.1" 404 -
+^C
+Keyboard interrupt received, exiting.
+
+krenare@krenare-VirtualBox:~$ 
+
+
+krenare@krenare-VirtualBox:~$ netstat -tulp
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      2970/python3         
+tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      -                   
+ tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN      -                   
+ tcp6       0      0 ip6-localhost:ipp       [::]:*                  LISTEN      -                   
+ udp        0      0 0.0.0.0:mdns            0.0.0.0:*                           -                   
+ udp        0      0 0.0.0.0:44815           0.0.0.0:*                           -                   
+ udp        0      0 localhost:domain        0.0.0.0:*                           -                   
+ udp        0      0 0.0.0.0:bootpc          0.0.0.0:*                           -                   
+ udp        0      0 0.0.0.0:ipp             0.0.0.0:*                           -                   
+ udp6       0      0 [::]:mdns               [::]:*                              -                   
+ udp6       0      0 [::]:51462              [::]:*                              -                   
+
+krenare@krenare-VirtualBox:~$ kill 2970
+krenare@krenare-VirtualBox:~$  
+krenare@krenare-VirtualBox:~$ 
+
